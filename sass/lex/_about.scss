@@ -1,0 +1,55 @@
+.section-about {
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+
+    &__article {
+
+        &__h1 {
+            position: relative;
+            margin: 0 10px 50px 0;
+            padding: 0 0 25px 0;
+            font-size: 2.2rem;
+            font-weight: $semiBold-font;
+            line-height: 100%;
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: $main-color;
+                width: 20%;
+                height: 3px;
+            }
+        }
+
+        &__span {
+            color: $main-color;
+            font-weight: 700;
+        }
+
+        &__p {
+            margin: 25px 0;
+            text-align: justify;
+        }
+
+        &__btn {
+            margin: 8% auto 13% auto;
+            color: #fff;
+        }
+    }
+
+    &__columnOne,
+    &__columnTwo {
+
+        &__h2 {
+            margin: 15px 0;
+            font-weight: $semiBold-font;
+        }
+
+        & img {
+            width: 100%;
+            display: block;
+        }
+    }
+}
