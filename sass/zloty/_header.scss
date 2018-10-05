@@ -1,0 +1,43 @@
+.intro {
+    background: url(../assets/img/intro-bg.jpg) top center no-repeat;
+    height: 100vh;
+    max-height: 830px;
+    background-size: cover;
+  
+    &--overlay {
+        height: 100vh;
+        max-height: 830px;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
+    }
+    
+    &__content {
+        // padding-top: 66px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #fff;
+    }
+    &__heading {
+        font-weight:700;
+        font-size: 40px;
+        text-transform: uppercase;
+        @include screen(sm) {
+            font-size: 48px;
+        }
+        @include screen(md) {
+            font-size: 56px;
+        }
+        @include screen(lg) {
+            font-size: 64px;
+        }   
+    }
+    &__text {
+        font-size: 20px;
+        font-weight: 400;
+        margin-bottom: 40px;
+        @include screen(md) {
+            font-size: 22px;
+        }
+    }
+}
