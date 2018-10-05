@@ -1,0 +1,97 @@
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:#333333;
+    z-index: 100;
+}
+
+.menu {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+        font-size: 26px;
+        font-weight: 600;
+
+        a {
+            color:#eee;
+        }
+    }
+    &-btn {
+        background-color: transparent;
+        border: 1px solid #fff;
+        display: block;
+        color: blue;
+        padding: 9px;
+        transition: background-color .3s, border-color .3s;
+        @include screen(lg) {
+            display: none;
+        }
+        &__line {
+            display: block;
+            width: 22px;
+            height: 2px;
+            border-radius: 1px;
+            background-color: #888;
+            transition: background-color .3s;
+            &--central {
+                margin-top: 4px;
+                margin-bottom: 4px;
+            }
+        }
+        &:hover {
+            background-color:#fff;
+        }
+        &:hover &__line {
+            background-color: #6aaf08;
+        }
+    }
+    &-content {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 66px;
+        right: 0;
+        background-color:#333333;
+        @include screen(lg) {
+            display: block;
+            position: static;
+        }
+        &--on {
+            display: block;
+            border-top:1px solid;
+        }
+        &__item {
+            margin-top: 5px;
+            @include screen(lg) {
+                margin-top: 0;
+            }
+            & a {
+                display: block;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: 15px;
+                text-transform: uppercase;
+                color: #ddd;
+                transition: color .2s;
+                letter-spacing: 1px;
+                &:hover {
+                    color: #6aaf08;
+                }
+                @include screen(lg) {
+                    padding: 0 20px;
+                }
+            }
+        }
+        &__list {
+            @include screen(lg) {
+                display: flex;
+                margin: 0;
+            }
+        }
+    }
+   
+}
