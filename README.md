@@ -65,6 +65,13 @@ W folderze sass została utworzona struktura
 
 ------------
 
+link do strony 
+
+https://zloty-test.github.io/landscaper_www/ 
+ 
+link do projektu
+
+https://www.free-css.com/free-css-templates/page232/landscaper
 
 
 Jak macie jakieś pomysły albo uwagi to piszcie ;)
