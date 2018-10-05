@@ -10,7 +10,7 @@
 
 	np. 
 
-	`git remote admin https://github.com/zloty-test/landscaper_www.git`
+	`git remote add admin https://github.com/zloty-test/landscaper_www.git`
 	
 	Sprawdzamy czy wszystko okej
 	
