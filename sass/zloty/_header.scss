@@ -1,12 +1,18 @@
 .intro {
     background: url(../assets/img/intro-bg.jpg) top center no-repeat;
     height: 100vh;
+    @media (max-height: 620px) and (orientation: landscape) {
+        height: auto;
+    }
     max-height: 830px;
     background-size: cover;
   
     &--overlay {
         height: 100vh;
         max-height: 830px;
+        @media (max-height: 620px) and (orientation: landscape) {
+            height: auto;
+        }
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.4) 100%);
     }
     
@@ -17,6 +23,10 @@
         align-items: center;
         text-align: center;
         color: #fff;
+        @media (max-height: 620px) and (orientation: landscape) {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
     }
     &__heading {
         font-weight:700;
@@ -30,7 +40,8 @@
         }
         @include screen(lg) {
             font-size: 64px;
-        }   
+        }
+
     }
     &__text {
         font-size: 20px;
