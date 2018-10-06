@@ -1,7 +1,11 @@
 ## Zloty 
 
-- sekcja header i menu (na razie wstawiłem to co było wcześniej)
+- Header/Nav/Testimonials Sections
 
 ## Lex Aeterna
 
+- AboutUs/Gallery Sections 
+
 ## Tomasz Z
+
+-Services/Contact/Footer Sections
