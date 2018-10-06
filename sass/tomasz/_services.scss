@@ -1,0 +1,57 @@
+.services {
+  max-width: 1920px;
+  background-color: rgb(106, 175, 8);
+  padding: 100px 0;
+  text-align: center;
+
+  h2,
+  h3,
+  h4,
+  p {
+    color: white;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3,
+    {
+    font-size: 20px;
+    font-weight: 100;
+  }
+
+  h4 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  hr {
+    background: rgba(255, 255, 255, 0.7);
+    width: 70px;
+    height: 3px;
+    border: 0;
+  }
+
+  .service-text-main {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+
+  .description {
+    width: 200px;
+    margin: 0 auto;
+  }
+
+  img {
+    border: 10px solid rgba(10, 10, 10, .15);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+}
