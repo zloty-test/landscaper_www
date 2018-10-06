@@ -18,3 +18,10 @@ aboutUsScroll.forEach(menu => {
         });
     })
 });
+
+
+// lightbox options
+
+lightbox.option({
+    'wrapAround': true
+})

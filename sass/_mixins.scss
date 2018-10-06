@@ -1,14 +1,56 @@
 @mixin screen($breakpoint) {
-    @if $breakpoint == sm {
-        @media (min-width:576px) {@content};
+    @if $breakpoint==sm {
+        @media (min-width: 576px) {
+            @content
+        }
+
+        ;
     }
-    @if $breakpoint == md {
-        @media (min-width:768px) {@content};
+
+    @if $breakpoint==md {
+        @media (min-width: 768px) {
+            @content
+        }
+
+        ;
     }
-    @if $breakpoint == lg {
-        @media (min-width:992px) {@content};
+
+    @if $breakpoint==lg {
+        @media (min-width: 992px) {
+            @content
+        }
+
+        ;
     }
-    @if $breakpoint == xl {
-        @media (min-width:1200px) {@content};
+
+    @if $breakpoint==xl {
+        @media (min-width: 1200px) {
+            @content
+        }
+
+        ;
     }
+}
+
+@mixin underlinedH1 ($underline-width, $font-color, $underline-color) {
+    & {
+        position: relative;
+        margin: 0 10px 50px 0;
+        padding: 0 0 25px 0;
+        font-size: 2.2rem;
+        font-weight: $semiBold-font;
+        line-height: 100%;
+        color: $font-color;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: $underline-color;
+            width: $underline-width;
+            height: 3px;
+        }
+    }
+
 }

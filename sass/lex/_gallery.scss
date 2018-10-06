@@ -1,0 +1,95 @@
+.section-gallery {
+    text-align: center;
+
+    &__h1 {
+        @include underlinedH1(20vw, #666666, $main-color);
+
+        & {
+            margin-bottom: 15px;
+        }
+
+        &::after {
+            width: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__p {
+        padding: 2%;
+    }
+
+    &__button {
+        margin: 2% auto;
+        padding: 10px 16px;
+        background-color: #ddd;
+
+        &--active {
+            background-color: $main-color;
+            color: #fff;
+        }
+    }
+
+    &__wrapper {
+        margin: 2% auto;
+
+        &__img {
+            margin-bottom: 2%;
+
+            &__a {
+                position: relative;
+                transition: $trs-time;
+                overflow: hidden;
+
+                &__img {
+                    display: block;
+                    transform-origin: 50% 50%;
+                    transition: $trs-time;
+                }
+
+                &__layer {
+
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #000;
+                    opacity: 0;
+                    transition: $trs-time;
+                }
+
+                &__p {
+                    position: absolute;
+                    bottom: 20%;
+                    left: 50%;
+                    transform: translate(-50%, 100%);
+                    color: #fff;
+                    opacity: 0;
+                    text-transform: uppercase;
+                    transition: $trs-time .1s;
+                    z-index: 1;
+                }
+
+                &:hover {
+                    box-shadow: 1px 6px 10px 1px rgba(0, 0, 0, .8),
+                        4px 10px 10px 1px rgba(0, 0, 0, .4);
+                }
+
+                &:hover &__p {
+                    bottom: 50%;
+                    opacity: 1;
+                }
+
+                &:hover &__layer {
+                    opacity: .5;
+                }
+
+                &:hover &__img {
+                    transform: scale(1.2) rotate(-5deg);
+
+                }
+            }
+        }
+    }
+}
