@@ -7,27 +7,20 @@ var menu = (function () {
         data.menuContent.classList.toggle('menu-content--on');
     });
 })();
+
 // Lex js scrolling function
-const aboutUsScroll = document.querySelectorAll(".menu-content__item__about");
-const galleryScroll = document.querySelectorAll(".menu-content__item__gallery");
 
-aboutUsScroll.forEach(menu => {
-    menu.addEventListener("click", () => {
+const nav = document.querySelectorAll(".menu-content__item");
+const anchors = ["header", "about", "services", "gallery", "contact"]
+
+nav.forEach((navBtn, index) => {
+    navBtn.addEventListener("click", () => {
         window.scrollTo({
             behavior: "smooth",
-            top: document.querySelector("#about").offsetTop
+            top: document.getElementById(`${anchors[index]}`).offsetTop
         });
     })
-});
-
-galleryScroll.forEach(menu => {
-    menu.addEventListener("click", () => {
-        window.scrollTo({
-            behavior: "smooth",
-            top: document.querySelector("#gallery").offsetTop
-        });
-    })
-});
+})
 
 // Lex gallery filter function
 
