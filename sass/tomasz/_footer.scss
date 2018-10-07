@@ -1,0 +1,51 @@
+.footer {
+  background-color: rgb(51, 51, 51);
+  height: 200px;
+  width: 100%;
+  text-align: center;
+
+  .icons {
+    margin: 0 auto 20px;
+    display: flex;
+    justify-content: center;
+  }
+
+  p {
+    color: #666;
+    font-size: 15px;
+    display: block;
+
+    @media (min-height: 500px) and (orientation: landscape) {
+      display: inline-block;
+    }
+
+    margin: 0;
+  }
+
+  p:nth-child(3) {
+    color: rgb(116, 116, 116);
+    font-weight: 600;
+  }
+
+  a {
+    display: inline;
+    line-height: 80px;
+    margin: 20px 25px 10px;
+  }
+
+  i.fab {
+    padding: 9px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    background-color: #444;
+    color: #6aaf08;
+    border-radius: 50%;
+    transition: linear 0.2s;
+  }
+
+  i.fab:hover {
+    background-color: #6aaf08;
+    color: #444;
+  }
+}
