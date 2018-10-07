@@ -1,0 +1,36 @@
+.footer {
+  background-color: rgb(51, 51, 51);
+  height: 180px;
+  width: 100%;
+  text-align: center;
+
+  .icons {
+    margin: 0 auto;
+  }
+
+  p {
+    color: #666;
+    font-size: 15px;
+  }
+
+  a {
+    display: inline;
+  }
+
+  i.fab {
+    padding: 10px;
+    width: 42px;
+    height: 42px;
+    font-size: 22px;
+    background-color: #444;
+    color: #6aaf08;
+    border-radius: 50%;
+    transition: linear 0.2s;
+    margin: 35px;
+  }
+
+  i.fab:hover {
+    background-color: #6aaf08;
+    color: #444;
+  }
+}
