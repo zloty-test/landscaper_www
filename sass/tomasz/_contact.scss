@@ -1,7 +1,12 @@
 .contact {
+  display: none; // wyłączyłem bo na telefonach pojawia się mały scroll w osi x 
   text-align: center;
+<<<<<<< HEAD
   box-sizing: border-box;
   background-color: rgb(246, 246, 246);
+=======
+  // box-sizing: border-box; to jest juz ustawione dla kazdego elemntu w base.scss 
+>>>>>>> 38b547105e79d23d8e470cbddc214aac78a090ab
 
   .contact-main-text {
     width: 100%;

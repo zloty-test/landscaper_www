@@ -1,6 +1,8 @@
 .section-about {
-    margin-top: 15vh;
-    margin-bottom: 15vh;
+    padding-top: 80px;
+    @include screen(xl) {
+        padding-top: 130px;
+    }
 
     &__article {
 
