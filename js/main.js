@@ -11,7 +11,7 @@ var menu = (function () {
 // Lex js scrolling function
 
 const nav = document.querySelectorAll(".menu-content__item");
-const anchors = ["header", "about", "services", "gallery", "contact"]
+const anchors = ["about", "services", "gallery", "contact"]
 
 nav.forEach((navBtn, index) => {
     navBtn.addEventListener("click", () => {
