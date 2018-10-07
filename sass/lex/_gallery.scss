@@ -2,14 +2,13 @@
     text-align: center;
 
     &__h1 {
-        @include underlinedH1(20vw, #666666, $main-color);
+        @include underlinedH1(70px, #666666, $main-color);
 
         & {
             margin-bottom: 15px;
         }
 
         &::after {
-            width: 10%;
             left: 50%;
             transform: translateX(-50%);
         }
@@ -30,11 +29,25 @@
         }
     }
 
+
     &__wrapper {
         margin: 2% auto;
+        height: auto;
+        display: flex;
 
+        // filter js function --start
         &__img {
-            margin-bottom: 2%;
+            margin-bottom: 3%;
+            transition: 1s;
+            opacity: 0;
+            transform: scale(0);
+
+            &--active {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            // filter js function --end
 
             &__a {
                 position: relative;
@@ -86,8 +99,7 @@
                 }
 
                 &:hover &__img {
-                    transform: scale(1.2) rotate(-5deg);
-
+                    transform: scale(1.2);
                 }
             }
         }
