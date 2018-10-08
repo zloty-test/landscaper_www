@@ -1,77 +1,29 @@
-
-/*
-Zamiast całą swoją sekcje dac w diva lepiej uzyc section (zmieniłem to juz )
-
-Używaj więcej klas pod Our Services masz jakiś tam lorem ipsum i to dałeś jako h3 (lepiej było dać jako p ) i ustawiłeś 
-na
-font-size: 20px;
-font-weight: 100;
-
-po czym pod zdjęciem też masz nagłówki h3 i one według projektu powinny mieć 
-font-size: 24px;
-font-weight: 400;
-ale jako że ty miałeś juz dla h3 ustawione style to one maja to co wyzej font-weight:100 font-size 20px 
-jakbyś dał osobne klasy problemu by nie było (poprawiłem to)
-
-
-*/
-
 .services {
-  // max-width: 1920px; nie potrzebne sekcja zajmuje domyślnie całe miejsce
-  //  a wszsytko co ma być ograniczone i wyśrodkowane to jest w container
   background-color: rgb(106, 175, 8);
-  // padding: 100px 0;  // tutaj mamy wspólną klase .section zeby te odległości były jednakowe
+  padding: 100px 0;
   text-align: center;
+  color: white;
 
-
-
-  // to wszystko mogłeś spokojnie ustawić sobie w klasie services wszsystkie teksy sa białe
-  h2,
-  h3,
-  h4,
-  p {
-    color: white;
-  }
 
   h2 {
     font-size: 36px;
   }
 
 
-  // tutaj nie potrzebne bo nigdzie nie uzywałes h4
-  // h4 {
-  //   font-size: 20px;
-  // }
-
-
-  // tutaj wyszstko dobrze ale jak zmienisz ten lorem ipsum na p zamiast na h3 to będzie miał 15px 
-  // a wedlug projektu powinno byc 18px możesz zrobić coś takiego nawet żeby juz nie pisać wiecej klas 
-  // services__heading p i tu 18px description p 18px
-  p {
-    font-size: 15px;
+  .ervices__heading p {
+    font-size: 18px;
   }
 
-  // hr {
-  //   background: rgba(255, 255, 255, 0.7);
-  //   width: 70px;
-  //   height: 3px;
-  //   border: 0;
-  // }
-  // hr nie potrzebne jest takie kreski to zazwyczaj się robi w samy css np. :before :after 
+  .description p {
+    font-size: 14px;
+    font-weight: 200;
+  }
 
-  // .service-text-main {
-  //   width: 100%;
-  //   text-align: center;
-  //   padding-bottom: 50px;
-  // }
-
-
-// tu użyłem dla nagłówka gotowego mixina zobacz sobei w mixins , dopisałem wysrodkowanie kreski jeszce 
-// najlepiej jakby te h2 miało swoja klase 
 
   h2 {
-    @include underlinedH1(70px,#ffffff,rgba(255,255,255,0.6));
-    margin:0;
+    @include underlinedH1(70px, #ffffff, rgba(255, 255, 255, 0.6));
+    margin: 0;
+
     &::after {
       left: 50%;
       transform: translateX(-50%);
@@ -80,14 +32,16 @@ jakbyś dał osobne klasy problemu by nie było (poprawiłem to)
 
 
   .description {
-    // width: 200px; na telefonie wtedy to słabo wygląda 
     margin: 0 auto;
+
     h3 {
       font-size: 24px;
       font-weight: 400;
     }
+
     p {
-      margin-bottom: 50px; // na tel wtedy elementy nie są jeden na drugim to dodałem
+      margin-bottom: 50px;
+
       @include screen(lg) {
         margin-bottom: 15px;
       }
@@ -103,6 +57,7 @@ jakbyś dał osobne klasy problemu by nie było (poprawiłem to)
 
   &__heading {
     margin-bottom: 70px;
+
     h3 {
       font-size: 18px;
       font-weight: 400;
