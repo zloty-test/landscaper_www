@@ -14,7 +14,8 @@
         "../sass/lex/_about.scss",
         "../sass/lex/_gallery.scss",
         "../sass/tomasz/_services.scss",
-        "../sass/tomasz/_contact.scss"
+        "../sass/tomasz/_contact.scss",
+        "../sass/tomasz/_footer.scss"
     ],
     "names": [],
     "file": "style.css"
