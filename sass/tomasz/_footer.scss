@@ -15,7 +15,7 @@
     font-size: 15px;
     display: block;
 
-    @media (min-height: 500px) and (orientation: landscape) {
+    @media (min-width: 500px) and (orientation: landscape) {
       display: inline-block;
     }
 

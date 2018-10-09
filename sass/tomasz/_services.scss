@@ -3,33 +3,42 @@
   padding: 100px 0;
   text-align: center;
   color: white;
-
-
-  h2 {
-    font-size: 36px;
-  }
-
-
-  .ervices__heading p {
-    font-size: 18px;
-  }
-
-  .description p {
-    font-size: 14px;
-    font-weight: 200;
-  }
-
+  overflow: hidden;
 
   h2 {
-    @include underlinedH1(70px, #ffffff, rgba(255, 255, 255, 0.6));
-    margin: 0;
+    font-size: 36x;
+  }
 
-    &::after {
-      left: 50%;
-      transform: translateX(-50%);
+  .row .elements {
+    transition: 2s;
+  }
+
+  .row .elements img {
+    transition: 2s;
+  }
+
+
+  @media (min-width: 1024px) and (orientation: landscape) {
+    .row .element1 {
+      transform: translateX(-35vw);
+    }
+
+    .row .element4 {
+      transform: translateX(35vw);
     }
   }
 
+  .row .show {
+    transform: translateX(0);
+  }
+
+  .row .rotate {
+    transform: rotate(360deg);
+  }
+
+  .services__heading p {
+    font-size: 18px;
+  }
 
   .description {
     margin: 0 auto;
@@ -45,6 +54,21 @@
       @include screen(lg) {
         margin-bottom: 15px;
       }
+    }
+  }
+
+  .description p {
+    font-size: 14px;
+    font-weight: 200;
+  }
+
+  h2 {
+    @include underlinedH1(70px, #ffffff, rgba(255, 255, 255, 0.6));
+    margin: 0;
+
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
     }
   }
 
