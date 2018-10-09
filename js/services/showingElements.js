@@ -1,5 +1,6 @@
 $(document).on("scroll", function () {
   const windowHeight = $(window).height();
+  const windowWidth = $(window).width();
   const scrollValue = $(this).scrollTop();
   const $element1 = $(".element1");
   const $element4 = $(".element4");
@@ -10,7 +11,9 @@ $(document).on("scroll", function () {
   if (scrollValue > element1FromTop - windowHeight + 300) {
     $element1.addClass("show");
     $element4.addClass("show");
-    $element2.addClass("rotate");
-    $element3.addClass("rotate");
+    if (windowWidth >= 1024) {
+      $element2.addClass("rotate");
+      $element3.addClass("rotate");
+    }
   }
 });
