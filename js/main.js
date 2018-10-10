@@ -11,7 +11,7 @@ var menu = (function () {
 // Lex js scrolling function
 
 const nav = document.querySelectorAll(".menu-content__item");
-const anchors = ["about", "services", "gallery","testimonials", "contact"];
+const anchors = ["about", "services", "gallery", "testimonials", "contact"];
 
 nav.forEach((navBtn, index) => {
     navBtn.addEventListener("click", () => {
@@ -41,7 +41,12 @@ galleryBtns.forEach(btn => {
             case "ALL":
                 {
                     galleryImages.forEach(img => {
-                        img.classList.add("section-gallery__wrapper__img--active");
+                        img.classList.remove("section-gallery__wrapper__img--active");
+                        setTimeout(() => {
+                            img.classList.add("section-gallery__wrapper__img--active");
+                            img.style.position = "relative";
+                        }, 700)
+
                     })
                     break;
                 }
@@ -49,9 +54,15 @@ galleryBtns.forEach(btn => {
                 {
                     galleryImages.forEach(img => {
                         img.classList.remove("section-gallery__wrapper__img--active");
-                        if (img.classList.contains("lawn")) {
-                            img.classList.add("section-gallery__wrapper__img--active");
-                        }
+                        setTimeout(() => {
+                            if (img.classList.contains("lawn")) {
+                                img.classList.add("section-gallery__wrapper__img--active");
+                                img.style.position = "relative";
+                            } else {
+                                img.style.position = "absolute";
+                            }
+                        }, 700)
+
                     })
                     break;
                 }
@@ -59,9 +70,14 @@ galleryBtns.forEach(btn => {
                 {
                     galleryImages.forEach(img => {
                         img.classList.remove("section-gallery__wrapper__img--active");
-                        if (img.classList.contains("garden")) {
-                            img.classList.add("section-gallery__wrapper__img--active");
-                        }
+                        setTimeout(() => {
+                            if (img.classList.contains("garden")) {
+                                img.classList.add("section-gallery__wrapper__img--active");
+                                img.style.position = "relative";
+                            } else {
+                                img.style.position = "absolute";
+                            }
+                        }, 700)
                     })
                     break;
                 }
@@ -69,9 +85,14 @@ galleryBtns.forEach(btn => {
                 {
                     galleryImages.forEach(img => {
                         img.classList.remove("section-gallery__wrapper__img--active");
-                        if (img.classList.contains("planting")) {
-                            img.classList.add("section-gallery__wrapper__img--active");
-                        }
+                        setTimeout(() => {
+                            if (img.classList.contains("planting")) {
+                                img.classList.add("section-gallery__wrapper__img--active");
+                                img.style.position = "relative";
+                            } else {
+                                img.style.position = "absolute";
+                            }
+                        }, 700)
                     })
                     break;
                 }
