@@ -108,3 +108,15 @@ galleryBtns.forEach(btn => {
 lightbox.option({
     'wrapAround': true
 })
+
+
+// swiper options
+
+var mySwiper = new Swiper ('.swiper-container', {
+    direction: 'horizontal',
+    loop: false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    }
+  });
