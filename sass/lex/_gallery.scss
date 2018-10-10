@@ -32,19 +32,21 @@
 
     &__wrapper {
         margin: 2% auto;
-        height: auto;
-        display: flex;
+        display: grid;
 
         // filter js function --start
+
         &__img {
-            margin-bottom: 3%;
+            margin: 2% 0;
             transition: 1s;
             opacity: 0;
             transform: scale(0);
+            transform-origin: center center;
 
             &--active {
                 opacity: 1;
                 transform: scale(1);
+                position: relative;
             }
 
             // filter js function --end
